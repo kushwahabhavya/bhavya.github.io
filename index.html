@@ -17,17 +17,17 @@
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 70px 20px;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
     }
 
     h2 {
-      margin-top: 50px;
-      font-size: 1.6rem;
+      margin-top: 80px;
+      font-size: 1.7rem;
       border-bottom: 2px solid #22c55e;
       display: inline-block;
       padding-bottom: 6px;
@@ -48,11 +48,25 @@
       color: #cbd5f5;
     }
 
+    .card {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 30px;
+      transition: transform 0.35s ease, border-color 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #c2fabb;
+    }
+
     .tag {
       display: inline-block;
       margin: 6px 6px 0 0;
       padding: 6px 12px;
-      background: #020617;
+      background: transparent;
       border: 1px solid #1f2937;
       border-radius: 999px;
       font-size: 0.9rem;
@@ -65,202 +79,209 @@
     }
 
     th, td {
-      border: 1px solid #1f2937;
-      padding: 10px;
+      border-bottom: 1px solid #1f2937;
+      padding: 12px 6px;
       text-align: left;
     }
 
     th {
-      background: #020617;
+      color: #e5e7eb;
     }
 
     a {
       color: #22c55e;
       text-decoration: none;
+      position: relative;
     }
 
-    a:hover {
-      text-decoration: underline;
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background: #c2fabb;
+      transition: width 0.35s ease;
+    }
+
+    a:hover::after {
+      width: 100%;
     }
 
     footer {
-      margin-top: 80px;
+      margin-top: 120px;
       text-align: center;
       color: #94a3b8;
       font-size: 0.9rem;
     }
-    /* =========================
-   CLUELY-STYLE ANIMATIONS
-========================= */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
+    /* ===== CLUELY STYLE ANIMATIONS ===== */
 
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.card {
-  transition: transform 0.35s ease, border-color 0.35s ease;
-}
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #c2fabb;
-}
-
-a {
-  position: relative;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0;
-  height: 1px;
-  background: #c2fabb;
-  transition: width 0.35s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
-    <!-- HEADER -->
-    <h1>👋 Hi, I'm Bhavya Kushwaha</h1>
-    <p>🎓 B.Tech CSE (Cloud Computing) Student @ VIT Bhopal</p>
-    <p>🌍 Based in Noida, India</p>
+    <!-- HERO -->
+    <h1 class="reveal">👋 Hi, I'm Bhavya Kushwaha</h1>
+    <p class="reveal delay-1">🎓 B.Tech CSE (Cloud Computing) Student @ VIT Bhopal</p>
+    <p class="reveal delay-2">🌍 Based in Noida, India</p>
 
     <!-- ABOUT -->
-    <h2>🚀 About Me</h2>
-    <p>
-      I’m a passionate Computer Science student focused on Cloud Computing,
-      Python development, and AI/ML fundamentals. I enjoy building real-world
-      projects and continuously improving my skills through consistency and discipline.
-    </p>
-    <p>
-      <strong>Fun fact:</strong> I’m also deeply into armwrestling 🦾 — training strength,
-      technique, and grip power!
-    </p>
-
-    <!-- SKILLS -->
-    <h2>🔧 Tech Stack & Skills</h2>
-
-    <p><strong>Programming & Technologies</strong></p>
-    <div>
-      <span class="tag">Python 🐍</span>
-      <span class="tag">AI/ML Basics 🤖</span>
-      <span class="tag">Cloud & IT Fundamentals ☁️</span>
-      <span class="tag">Git</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">Jupyter Notebooks</span>
+    <h2 class="reveal">🚀 About Me</h2>
+    <div class="card reveal delay-1">
+      <p>
+        I’m a passionate Computer Science student focused on Cloud Computing,
+        Python development, and AI/ML fundamentals. I enjoy building real-world
+        projects and continuously improving my skills through consistency and discipline.
+      </p>
+      <p>
+        <strong>Fun fact:</strong> I’m also deeply into armwrestling 🦾 — training strength,
+        technique, and grip power!
+      </p>
     </div>
 
-    <p><strong>Soft Skills</strong></p>
-    <ul>
-      <li>Communication 🗣️</li>
-      <li>Problem Solving 🧩</li>
-      <li>Teamwork 🤝</li>
-      <li>Discipline 📅</li>
-    </ul>
+    <!-- SKILLS -->
+    <h2 class="reveal">🔧 Tech Stack & Skills</h2>
+    <div class="card reveal delay-1">
+      <p><strong>Programming & Technologies</strong></p>
+      <div>
+        <span class="tag">Python 🐍</span>
+        <span class="tag">AI/ML Basics 🤖</span>
+        <span class="tag">Cloud Fundamentals ☁️</span>
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">Jupyter</span>
+      </div>
 
-    <p><strong>Languages</strong></p>
-    <ul>
-      <li>Hindi 🇮🇳 (Native)</li>
-      <li>English 🇬🇧 (Professional)</li>
-      <li>Japanese 🇯🇵 (JLPT N5)</li>
-    </ul>
+      <p><strong>Soft Skills</strong></p>
+      <ul>
+        <li>Communication 🗣️</li>
+        <li>Problem Solving 🧩</li>
+        <li>Teamwork 🤝</li>
+        <li>Discipline 📅</li>
+      </ul>
+
+      <p><strong>Languages</strong></p>
+      <ul>
+        <li>Hindi 🇮🇳 (Native)</li>
+        <li>English 🇬🇧 (Professional)</li>
+        <li>Japanese 🇯🇵 (JLPT N5)</li>
+      </ul>
+    </div>
 
     <!-- PROJECTS -->
-    <h2>📌 Projects</h2>
+    <h2 class="reveal">📌 Projects</h2>
+    <div class="card reveal delay-1">
+      <p><strong>📥 Spam Protection System</strong></p>
+      <ul>
+        <li>Python-based spam detection model</li>
+        <li>Machine learning classification techniques</li>
+        <li>Data preprocessing and accuracy optimization</li>
+      </ul>
 
-    <p><strong>📥 Spam Protection System</strong></p>
-    <ul>
-      <li>Built a Python-based spam detection model</li>
-      <li>Utilized Machine Learning classification techniques</li>
-      <li>Handled data preprocessing and accuracy optimization</li>
-    </ul>
+      <p><strong>🩺 Diabetes Prediction System</strong></p>
+      <ul>
+        <li>ML model for diabetes risk prediction</li>
+        <li>Data analysis and evaluation</li>
+      </ul>
 
-    <p><strong>🩺 Diabetes Prediction System</strong></p>
-    <ul>
-      <li>Developed an ML model to predict diabetes risk</li>
-      <li>Performed data analysis and model evaluation</li>
-    </ul>
+      <p><strong>💪 Armwrestling Profile</strong></p>
+      <p>
+        Applying discipline from sport to coding.
+        Focused on grip strength, tendon conditioning, and endurance.
+      </p>
 
-    <p><strong>💪 Armwrestling Profile</strong></p>
-    <p>
-      I apply the same discipline to the gym as I do to coding.
-      Currently focusing on Grip Strength, Tendon Conditioning, and Endurance.
-    </p>
-
-    <table>
-      <tr>
-        <th>Lift Type</th>
-        <th>Record</th>
-      </tr>
-      <tr>
-        <td>Strict Pronation</td>
-        <td>28.5 kg</td>
-      </tr>
-      <tr>
-        <td>Wrist Curl</td>
-        <td>25 kg (15 reps)</td>
-      </tr>
-    </table>
-
-    <p><strong>Current Goal:</strong> Improving technique development and muscle–mind connection.</p>
+      <table>
+        <tr>
+          <th>Lift Type</th>
+          <th>Record</th>
+        </tr>
+        <tr>
+          <td>Strict Pronation</td>
+          <td>28.5 kg</td>
+        </tr>
+        <tr>
+          <td>Wrist Curl</td>
+          <td>25 kg (15 reps)</td>
+        </tr>
+      </table>
+    </div>
 
     <!-- CERTIFICATIONS -->
-    <h2>🏆 Certifications</h2>
-    <ul>
-      <li>📜 Python Programming — Vityarthi Course</li>
-      <li>📜 Introduction to AI/ML — Vityarthi Course</li>
-    </ul>
+    <h2 class="reveal">🏆 Certifications</h2>
+    <div class="card reveal delay-1">
+      <ul>
+        <li>📜 Python Programming — Vityarthi</li>
+        <li>📜 Introduction to AI/ML — Vityarthi</li>
+      </ul>
+    </div>
 
     <!-- GOALS -->
-    <h2>✨ Current Goals</h2>
-    <ul>
-      <li>☁️ Cloud Computing</li>
-      <li>🤖 AI/ML</li>
-      <li>🐍 Python Development</li>
-      <li>🛠️ Building strong tech projects</li>
-      <li>🏆 Competitive Armwrestling</li>
-    </ul>
+    <h2 class="reveal">✨ Current Goals</h2>
+    <div class="card reveal delay-1">
+      <ul>
+        <li>☁️ Cloud Computing</li>
+        <li>🤖 AI/ML</li>
+        <li>🐍 Python Development</li>
+        <li>🛠️ Building strong tech projects</li>
+        <li>🏆 Competitive Armwrestling</li>
+      </ul>
+    </div>
 
     <!-- CONTACT -->
-    <h2>📫 Connect with Me</h2>
-    <p>
-      📧 <a href="mailto:bhavyakushwaha.work@gmail.com">bhavyakushwaha.work@gmail.com</a><br />
-      💼 <a href="https://www.linkedin.com/in/bhavya-kushwaha-4855283a5/" target="_blank">LinkedIn</a><br />
-      🐙 <a href="https://github.com/kushwahabhavya" target="_blank">GitHub</a>
-    </p>
+    <h2 class="reveal">📫 Connect with Me</h2>
+    <div class="card reveal delay-1">
+      <p>
+        📧 <a href="mailto:bhavyakushwaha.work@gmail.com">bhavyakushwaha.work@gmail.com</a><br />
+        💼 <a href="https://www.linkedin.com/in/bhavya-kushwaha-4855283a5/" target="_blank">LinkedIn</a><br />
+        🐙 <a href="https://github.com/kushwahabhavya" target="_blank">GitHub</a>
+      </p>
+    </div>
 
     <footer>
       © 2026 Bhavya Kushwaha • Portfolio
     </footer>
 
   </div>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".reveal").forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
