@@ -11,52 +11,72 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
+      line-height: 1.7;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      color: #cbd5f5;
-      margin-bottom: 6px;
-    }
-
-    .location {
-      color: #94a3b8;
-      margin-bottom: 40px;
+      font-size: 2.4rem;
+      margin-bottom: 8px;
     }
 
     h2 {
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 1.6rem;
       border-bottom: 2px solid #22c55e;
       display: inline-block;
       padding-bottom: 6px;
     }
 
+    p {
+      color: #cbd5f5;
+      margin: 10px 0;
+    }
+
     ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
+      margin-top: 10px;
+      padding-left: 20px;
     }
 
     li {
-      margin-bottom: 12px;
+      margin-bottom: 6px;
+      color: #cbd5f5;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 6px 6px 0 0;
+      padding: 6px 12px;
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #1f2937;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #020617;
     }
 
     a {
       color: #22c55e;
       text-decoration: none;
-      font-weight: 500;
     }
 
     a:hover {
@@ -65,27 +85,129 @@
 
     footer {
       margin-top: 80px;
-      color: #64748b;
+      text-align: center;
+      color: #94a3b8;
       font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>👋 Hi, I'm Bhavya Kushwaha</h1>
-    <div class="subtitle">B.Tech CSE (Cloud Computing) Student @ VIT Bhopal</div>
-    <div class="location">📍 Noida, India</div>
 
-    <h2>🔗 Connect with Me</h2>
+    <!-- HEADER -->
+    <h1>👋 Hi, I'm Bhavya Kushwaha</h1>
+    <p>🎓 B.Tech CSE (Cloud Computing) Student @ VIT Bhopal</p>
+    <p>🌍 Based in Noida, India</p>
+
+    <!-- ABOUT -->
+    <h2>🚀 About Me</h2>
+    <p>
+      I’m a passionate Computer Science student focused on Cloud Computing,
+      Python development, and AI/ML fundamentals. I enjoy building real-world
+      projects and continuously improving my skills through consistency and discipline.
+    </p>
+    <p>
+      <strong>Fun fact:</strong> I’m also deeply into armwrestling 🦾 — training strength,
+      technique, and grip power!
+    </p>
+
+    <!-- SKILLS -->
+    <h2>🔧 Tech Stack & Skills</h2>
+
+    <p><strong>Programming & Technologies</strong></p>
+    <div>
+      <span class="tag">Python 🐍</span>
+      <span class="tag">AI/ML Basics 🤖</span>
+      <span class="tag">Cloud & IT Fundamentals ☁️</span>
+      <span class="tag">Git</span>
+      <span class="tag">GitHub</span>
+      <span class="tag">Jupyter Notebooks</span>
+    </div>
+
+    <p><strong>Soft Skills</strong></p>
     <ul>
-      <li>📧 <a href="mailto:bhavyakushwaha.work@gmail.com">Email</a></li>
-      <li>💼 <a href="https://www.linkedin.com/in/bhavya-kushwaha-4855283a5/" target="_blank">LinkedIn</a></li>
-      <li>🐙 <a href="https://github.com/kushwahabhavya" target="_blank">GitHub</a></li>
+      <li>Communication 🗣️</li>
+      <li>Problem Solving 🧩</li>
+      <li>Teamwork 🤝</li>
+      <li>Discipline 📅</li>
     </ul>
+
+    <p><strong>Languages</strong></p>
+    <ul>
+      <li>Hindi 🇮🇳 (Native)</li>
+      <li>English 🇬🇧 (Professional)</li>
+      <li>Japanese 🇯🇵 (JLPT N5)</li>
+    </ul>
+
+    <!-- PROJECTS -->
+    <h2>📌 Projects</h2>
+
+    <p><strong>📥 Spam Protection System</strong></p>
+    <ul>
+      <li>Built a Python-based spam detection model</li>
+      <li>Utilized Machine Learning classification techniques</li>
+      <li>Handled data preprocessing and accuracy optimization</li>
+    </ul>
+
+    <p><strong>🩺 Diabetes Prediction System</strong></p>
+    <ul>
+      <li>Developed an ML model to predict diabetes risk</li>
+      <li>Performed data analysis and model evaluation</li>
+    </ul>
+
+    <p><strong>💪 Armwrestling Profile</strong></p>
+    <p>
+      I apply the same discipline to the gym as I do to coding.
+      Currently focusing on Grip Strength, Tendon Conditioning, and Endurance.
+    </p>
+
+    <table>
+      <tr>
+        <th>Lift Type</th>
+        <th>Record</th>
+      </tr>
+      <tr>
+        <td>Strict Pronation</td>
+        <td>28.5 kg</td>
+      </tr>
+      <tr>
+        <td>Wrist Curl</td>
+        <td>25 kg (15 reps)</td>
+      </tr>
+    </table>
+
+    <p><strong>Current Goal:</strong> Improving technique development and muscle–mind connection.</p>
+
+    <!-- CERTIFICATIONS -->
+    <h2>🏆 Certifications</h2>
+    <ul>
+      <li>📜 Python Programming — Vityarthi Course</li>
+      <li>📜 Introduction to AI/ML — Vityarthi Course</li>
+    </ul>
+
+    <!-- GOALS -->
+    <h2>✨ Current Goals</h2>
+    <ul>
+      <li>☁️ Cloud Computing</li>
+      <li>🤖 AI/ML</li>
+      <li>🐍 Python Development</li>
+      <li>🛠️ Building strong tech projects</li>
+      <li>🏆 Competitive Armwrestling</li>
+    </ul>
+
+    <!-- CONTACT -->
+    <h2>📫 Connect with Me</h2>
+    <p>
+      📧 <a href="mailto:bhavyakushwaha.work@gmail.com">bhavyakushwaha.work@gmail.com</a><br />
+      💼 <a href="https://www.linkedin.com/in/bhavya-kushwaha-4855283a5/" target="_blank">LinkedIn</a><br />
+      🐙 <a href="https://github.com/kushwahabhavya" target="_blank">GitHub</a>
+    </p>
 
     <footer>
       © 2026 Bhavya Kushwaha
     </footer>
+
   </div>
 </body>
 </html>
